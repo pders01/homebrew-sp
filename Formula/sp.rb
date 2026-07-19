@@ -5,20 +5,20 @@
 class Sp < Formula
   desc "A daily scratchpad for quick notes and todos"
   homepage "https://github.com/pders01/sp"
-  version "0.18.1"
+  version "0.18.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/pders01/sp/releases/download/v0.18.1/sp_Darwin_x86_64.tar.gz"
-      sha256 "0b6e865b836e978d0da5ea1e2665f68f036828dc47158df08457d685c9f8ac06"
+      url "https://github.com/pders01/sp/releases/download/v0.18.2/sp_Darwin_x86_64.tar.gz"
+      sha256 "0e8aec5e4dc7f334a1b6156997f2913505ef6afb9a28857961a3c63801b45024"
 
       def install
         bin.install "sp"
       end
     end
     on_arm do
-      url "https://github.com/pders01/sp/releases/download/v0.18.1/sp_Darwin_arm64.tar.gz"
-      sha256 "8f6c1befcace5a28cbab7c2a76da512efba8ddf4f77d925009a8788b51987d08"
+      url "https://github.com/pders01/sp/releases/download/v0.18.2/sp_Darwin_arm64.tar.gz"
+      sha256 "2ca72e029b436f113ee5825caa1dbaf9217302329383533e0e1aed5e0b247e09"
 
       def install
         bin.install "sp"
@@ -29,8 +29,8 @@ class Sp < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pders01/sp/releases/download/v0.18.1/sp_Linux_x86_64.tar.gz"
-        sha256 "0b80dcfe65105575c9e4afeb474f3d353bdbb39d034a2fdab9ed14ec0703017c"
+        url "https://github.com/pders01/sp/releases/download/v0.18.2/sp_Linux_x86_64.tar.gz"
+        sha256 "865b4b78097a27220e180754a2c2f93ef3f8f2f0466570e2a144640a3d326efb"
 
         def install
           bin.install "sp"
@@ -39,8 +39,8 @@ class Sp < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pders01/sp/releases/download/v0.18.1/sp_Linux_arm64.tar.gz"
-        sha256 "7b0d6cb48b039f2c776d5af6c25ff48ce324eeafbd2c96e5b4db115ac09bbba8"
+        url "https://github.com/pders01/sp/releases/download/v0.18.2/sp_Linux_arm64.tar.gz"
+        sha256 "093f3cc01c5b118292ff3a0421e5dd16b2a149b1a282092a771a62c52ba62407"
 
         def install
           bin.install "sp"
