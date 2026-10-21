@@ -5,20 +5,20 @@
 class Sp < Formula
   desc "A daily scratchpad for quick notes and todos"
   homepage "https://github.com/pders01/sp"
-  version "0.20.1+ci.1"
+  version "0.20.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/pders01/sp/releases/download/v0.20.1+ci.1/sp_Darwin_x86_64.tar.gz"
-      sha256 "1c363d544d6bd30028b672c0711336f25aed7d36d375de4aa85ab94360d70369"
+      url "https://github.com/pders01/sp/releases/download/v0.20.2/sp_Darwin_x86_64.tar.gz"
+      sha256 "cf6e823370d99106c35a89023ffe43a4204cf21c2b29aa43bed9bfeab089f10f"
 
       def install
         bin.install "sp"
       end
     end
     on_arm do
-      url "https://github.com/pders01/sp/releases/download/v0.20.1+ci.1/sp_Darwin_arm64.tar.gz"
-      sha256 "47b2e6e4a3980722a14497f1396d34b2f72d7a0ea4a511bf11e1d28ef20bb8f0"
+      url "https://github.com/pders01/sp/releases/download/v0.20.2/sp_Darwin_arm64.tar.gz"
+      sha256 "34575a3928c33a90b93c4c02086fb49653783a0ac907b8e7cddd816ae38001d9"
 
       def install
         bin.install "sp"
@@ -29,8 +29,8 @@ class Sp < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pders01/sp/releases/download/v0.20.1+ci.1/sp_Linux_x86_64.tar.gz"
-        sha256 "a65ae8b92e25a6ea7b959e9c9fba8f7113f31500a1bbda70aed2b76199206ba8"
+        url "https://github.com/pders01/sp/releases/download/v0.20.2/sp_Linux_x86_64.tar.gz"
+        sha256 "3c40ff51010510f281a0b27626a8e38285183abe9f4d4e54cd83d88c99b0fb21"
 
         def install
           bin.install "sp"
@@ -39,8 +39,8 @@ class Sp < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pders01/sp/releases/download/v0.20.1+ci.1/sp_Linux_arm64.tar.gz"
-        sha256 "d4a8b827f2b3c4a955349a1948600a01440ed13be443076d112a1d864ac79b05"
+        url "https://github.com/pders01/sp/releases/download/v0.20.2/sp_Linux_arm64.tar.gz"
+        sha256 "98e925b626055e8ecc56df9893e10fe63707a712f5ce280bd9f019eccecf7fd9"
 
         def install
           bin.install "sp"
