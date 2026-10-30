@@ -5,20 +5,20 @@
 class Sp < Formula
   desc "A daily scratchpad for quick notes and todos"
   homepage "https://github.com/pders01/sp"
-  version "0.21.0"
+  version "0.21.0+ci.2"
 
   on_macos do
-    on_intel do
-      url "https://github.com/pders01/sp/releases/download/v0.21.0/sp_Darwin_x86_64.tar.gz"
-      sha256 "ad1b6c076077823312da2cb6ddd733727657b04d52753ed702e9b2dd36e84cab"
+    if Hardware::CPU.intel?
+      url "https://github.com/pders01/sp/releases/download/v0.21.0+ci.2/sp_Darwin_x86_64.tar.gz"
+      sha256 "c100d38492c75a32817e069493a25775e6d228705ba11c625e7308b0faaf3654"
 
       def install
         bin.install "sp"
       end
     end
-    on_arm do
-      url "https://github.com/pders01/sp/releases/download/v0.21.0/sp_Darwin_arm64.tar.gz"
-      sha256 "916819b52d8660e800471a2658253fedf4e4bcff6e771afd895d5593d6739590"
+    if Hardware::CPU.arm?
+      url "https://github.com/pders01/sp/releases/download/v0.21.0+ci.2/sp_Darwin_arm64.tar.gz"
+      sha256 "6d6fdb0fb5072b4ebc9200bcab4fc530f657f86f2e9764dd74925ab2a69be97e"
 
       def install
         bin.install "sp"
@@ -27,24 +27,18 @@ class Sp < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/pders01/sp/releases/download/v0.21.0/sp_Linux_x86_64.tar.gz"
-        sha256 "943641ea8be014016a79d0a343376c3b05431c1142844be1f1cb210b506549a9"
-
-        def install
-          bin.install "sp"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pders01/sp/releases/download/v0.21.0+ci.2/sp_Linux_x86_64.tar.gz"
+      sha256 "9edffd544f96818ed0e209ac169ca0e8e040e13e6cf6d2d619fce827b489fb81"
+      def install
+        bin.install "sp"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/pders01/sp/releases/download/v0.21.0/sp_Linux_arm64.tar.gz"
-        sha256 "da43940a79a38041a7ea8892c61801252d057b50369bacde7f7df6aaf209a0c1"
-
-        def install
-          bin.install "sp"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pders01/sp/releases/download/v0.21.0+ci.2/sp_Linux_arm64.tar.gz"
+      sha256 "bd1d708786aac01289ac15e8f43db28228d735379717beb378f3322f68e3d058"
+      def install
+        bin.install "sp"
       end
     end
   end
