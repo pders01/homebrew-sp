@@ -5,20 +5,21 @@
 class Sp < Formula
   desc "A daily scratchpad for quick notes and todos"
   homepage "https://github.com/pders01/sp"
-  version "0.21.0+ci.2"
+  version "0.22.0"
+  license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pders01/sp/releases/download/v0.21.0+ci.2/sp_Darwin_x86_64.tar.gz"
-      sha256 "c100d38492c75a32817e069493a25775e6d228705ba11c625e7308b0faaf3654"
+      url "https://github.com/pders01/sp/releases/download/v0.22.0/sp_Darwin_x86_64.tar.gz"
+      sha256 "d1f59ccbff504e8ba14f786d881553d411674f370ae91a03cd7046aa4a404917"
 
       def install
         bin.install "sp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pders01/sp/releases/download/v0.21.0+ci.2/sp_Darwin_arm64.tar.gz"
-      sha256 "6d6fdb0fb5072b4ebc9200bcab4fc530f657f86f2e9764dd74925ab2a69be97e"
+      url "https://github.com/pders01/sp/releases/download/v0.22.0/sp_Darwin_arm64.tar.gz"
+      sha256 "ce07ba2f622d0e5a8e6da1340141477c181bcd234b555dbc7f6055af3d06d8b6"
 
       def install
         bin.install "sp"
@@ -28,18 +29,22 @@ class Sp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pders01/sp/releases/download/v0.21.0+ci.2/sp_Linux_x86_64.tar.gz"
-      sha256 "9edffd544f96818ed0e209ac169ca0e8e040e13e6cf6d2d619fce827b489fb81"
+      url "https://github.com/pders01/sp/releases/download/v0.22.0/sp_Linux_x86_64.tar.gz"
+      sha256 "823ad55942f4eda6ffce016c2b1a25a31caa42665add71030c0cac7e2da481d8"
       def install
         bin.install "sp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pders01/sp/releases/download/v0.21.0+ci.2/sp_Linux_arm64.tar.gz"
-      sha256 "bd1d708786aac01289ac15e8f43db28228d735379717beb378f3322f68e3d058"
+      url "https://github.com/pders01/sp/releases/download/v0.22.0/sp_Linux_arm64.tar.gz"
+      sha256 "a4608eaa6662328e605d4c32e6f30775a7db2db7df311e9c766e035d6974d68c"
       def install
         bin.install "sp"
       end
     end
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/sp --version")
   end
 end
