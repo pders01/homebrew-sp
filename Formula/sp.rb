@@ -5,21 +5,21 @@
 class Sp < Formula
   desc "A daily scratchpad for quick notes and todos"
   homepage "https://github.com/pders01/sp"
-  version "0.23.0"
+  version "0.24.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pders01/sp/releases/download/v0.23.0/sp_Darwin_x86_64.tar.gz"
-      sha256 "659ffb92db4e750378b89d7bd5066b75b445144980f5d02a6e87b1b71dd42119"
+      url "https://github.com/pders01/sp/releases/download/v0.24.0/sp_Darwin_x86_64.tar.gz"
+      sha256 "f1ba7c99cae79d3f0f657f05915547fb0af545809d291df6db386474288a645e"
 
       def install
         bin.install "sp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pders01/sp/releases/download/v0.23.0/sp_Darwin_arm64.tar.gz"
-      sha256 "3223514e59f5a2fd7ce04f678c0f9bb45b49d36883dd7eea4f989f402ff0193d"
+      url "https://github.com/pders01/sp/releases/download/v0.24.0/sp_Darwin_arm64.tar.gz"
+      sha256 "c213f1ca43f8cef556be98bc753c156044422009386fff2f94349033725d6d5b"
 
       def install
         bin.install "sp"
@@ -29,15 +29,15 @@ class Sp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pders01/sp/releases/download/v0.23.0/sp_Linux_x86_64.tar.gz"
-      sha256 "bd354dc711b01c2bfb3211f62cb8a6d14439106cc6b0d5e4884df29caba3865e"
+      url "https://github.com/pders01/sp/releases/download/v0.24.0/sp_Linux_x86_64.tar.gz"
+      sha256 "4e027feb7d113a353998e8dc21badd6ec5f7dde0e6cf5bd193087df852dcf9cf"
       def install
         bin.install "sp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pders01/sp/releases/download/v0.23.0/sp_Linux_arm64.tar.gz"
-      sha256 "efe4f71439c26b2f6753011aa9a2f808efd9b34509db01607fc5927dba8ad2d3"
+      url "https://github.com/pders01/sp/releases/download/v0.24.0/sp_Linux_arm64.tar.gz"
+      sha256 "c3b0ca4129a654bdcc006c5cd38d13771397ff778719c0338053263d5d562c6a"
       def install
         bin.install "sp"
       end
